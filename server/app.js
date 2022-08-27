@@ -23,8 +23,7 @@ app.use(morgan('dev'));
 
 app.use((req, res, next) => {
   const accessList = [
-    'http://localhost:3000',
-    'http://localhost:3001',
+    'http://localhost:8080'
   ];
   const origin = req.get('origin');
   if (accessList.includes(origin)) { // если в списке есть адрес того, кто обращается к серверу, то делаем для него заголовок
